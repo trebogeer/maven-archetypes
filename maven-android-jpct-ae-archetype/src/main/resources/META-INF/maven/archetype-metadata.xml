@@ -15,13 +15,6 @@
     </requiredProperties>
 
     <fileSets>
-        <!-- Key Store -->
-        <fileSet filtered="false">
-            <directory></directory>
-            <includes>
-                <include>test-key.keystore</include>
-            </includes>
-        </fileSet>
         <fileSet filtered="false">
             <directory>repo</directory>
             <includes>
@@ -65,14 +58,13 @@
                     <includes>
                         <include>*.xml</include>
                         <include>*.conf</include>
-                    </includes>
-                </fileSet>
-                <fileSet filtered="true" encoding="UTF-8">
-                    <directory></directory>
-                    <includes>
                         <include>*.properties</include>
                     </includes>
+                    <excludes>
+                        <exclude>pom.xml</exclude>
+                    </excludes>
                 </fileSet>
+
             </fileSets>
         </module>
 
